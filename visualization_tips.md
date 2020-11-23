@@ -1,6 +1,6 @@
 ### Say no to (too many) interactive graphics:
 - For a finalized data presentation, err on the side of less interactive data visualizations 
-  - interactive data visualizations are good for explaratory data analysis (your job) but they can easily overwhelm whoever is reading through your work quickly. the role of data stories is to tell the story. 
+  - interactive data visualizations are good for explaratory data analysis (your job) but they can easily overwhelm whoever is reading through your work for answers. The role of data stories (presentation of data analysis) is do the work of storytelling. 
 
 ### Simplify, Simplify: Edward Tufte and Sparklines
 - edward tufte and sparklines
