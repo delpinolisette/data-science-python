@@ -107,8 +107,17 @@ for trp in zipped:
 ```
 
 
-- to load in a data frame:
+- example: to load in a data frame:
 
 `rem_df = pd.read_csv("data//sleeping_mammals.csv")`
 
+- can check we've created a data frame with `assert(type(rem_df)==pd.DataFrame)`
+- to get shape of the data frame try: 
+
+```python
+s = rem_df.shape
+nrows = s[0] # number of rows
+ncols = s[1] # number of columns
+```
+- to take a *random* sample from the data frame, try `rsample = rem_df.sample(12)`
 - 
