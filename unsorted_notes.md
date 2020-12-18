@@ -120,4 +120,11 @@ nrows = s[0] # number of rows
 ncols = s[1] # number of columns
 ```
 - to take a *random* sample from the data frame, try `rsample = rem_df.sample(12)`
-- 
+- to get an overall summary of the data, try:
+
+```python
+rsample
+rem_df
+rsample['sleep_total'].describe()
+rsample['sleep_rem'].describe()
+```
