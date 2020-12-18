@@ -76,4 +76,39 @@ plt.title("Distribution of heights for adult females and males")
 
 ```
 - `ord(character)` is the inverse of the `char(num)` function. returns the unicode corresponding to the character passed in. 
-- `zip` function aligns a number of lists of the same length. 
+- `zip` function aligns a number of lists of the same length. The output of a zipped list is a tuple of aligned list items. Example:
+```python
+zipped = zip(state, candy, amount)
+
+for trp in zipped:
+    if trp[1] == 'Skittles':
+      skittle_state.append(trp[0])
+      skittle_amount.append(trp[2])
+```
+
+# Things Learned from 2
+
+- in markdown can have some light HTML:
+
+```html
+<img src="img/nytimes_art.png" width="400px" style="float: left; padding: 10px; margin-right:20px;"/>
+
+<div style="padding: 30px; ">
+
+<h3>Some quotes from the article:</h3>
+
+<blockquote style="background-color: #ffffcc">
+    Test1
+</blockquote>
+
+<blockquote style="background-color: #ffcccc">Test 2</blockquote>
+ 
+</div>
+```
+
+
+- to load in a data frame:
+
+`rem_df = pd.read_csv("data//sleeping_mammals.csv")`
+
+- 
