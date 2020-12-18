@@ -128,3 +128,24 @@ rem_df
 rsample['sleep_total'].describe()
 rsample['sleep_rem'].describe()
 ```
+
+- `set()` function useful for returning only unique values from a list 
+- `.intersection` returns intersection of two *sets* in python
+```python 
+assert(set(rem_df.columns).intersection(column_labels.keys())=={'awake',
+ 'bodywt',
+ 'brainwt',
+ 'conservation',
+ 'genus',
+ 'name',
+ 'order',
+ 'sleep_cycle',
+ 'sleep_rem',
+ 'sleep_total',
+ 'vore'})
+```
+- `.map(dict)` function maps between two dictionaries (for our use) with an index serving as the "join" column. Example:
+
+```python
+
+``` 
