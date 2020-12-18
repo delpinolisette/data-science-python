@@ -1,3 +1,4 @@
+# Cheat Sheet of All Things Learned
 TOC:
 1. assig 1
 2. assig 2
@@ -34,8 +35,45 @@ TOC:
 
 
 ---
+
 # Things Learned from 1:
 - '%matplotlib inline' is a magic function that displays matplotlib backend in line and also saves the plots. [more info here](https://stackoverflow.com/questions/43027980/purpose-of-matplotlib-inline)
 - `sorted(list)` returns a sorted list, useful in testing such as `assert(sorted(county)==['Armstrong', 'Crawford', 'Dauphin', 'Fulton', 'Philadelphia'])`
-- `listname.index('item whose index i want')` function is useful for returning index. 
-- 
+- `list_name.index('item whose index i want')` function is useful for returning index. 
+### Testing Sample Code:
+```python
+assert(var_name==534)
+assert(bool_name==False)
+```
+### `Enumerate`
+
+`enumerate(list_name)` turns a list into index, list_item pair. Good for iterating :
+```python
+for idx, name in enumerate(county):
+    
+    if wagner[idx] > wolf[idx]:
+        won = 'Wagner'
+        winner.append(won)
+    else:
+        won = 'Wolf'
+        winner.append(won)
+        
+    print('{} won in {} county'.format(won,name))
+```
+`help(enumerate)` gives extra info. 
+
+### All Visualization Examples
+
+```python
+plt.hist(male, alpha=0.5, label='male')
+plt.hist(female, alpha=0.5, label='female')
+plt.legend()
+plt.vlines([fmean, mmean], *plt.ylim(), linestyles='dashed')
+
+
+plt.xlabel("height (inches)", fontsize=12)
+plt.title("Distribution of heights for adult females and males")
+
+```
+- `ord(character)` is the inverse of the `char(num)` function. returns the unicode corresponding to the character passed in. 
+- `zip` function aligns a number of lists of the same length. 
