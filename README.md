@@ -3,7 +3,7 @@ My notes, exercises, work, and code in learning Data Science from scratch (in Py
 
 Includes my cheatsheets for pandas, implementations of statistical measures from scratch, best practices for Data Science projects, etc.
 
-Serves as a record for everything I've learned through textbooks, personal projects, and school. 
+Serves as a record for everything I've learned through textbooks, personal projects, work, and school. 
 
 
 # Table of Contents:
