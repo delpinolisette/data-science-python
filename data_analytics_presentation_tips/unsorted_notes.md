@@ -149,3 +149,41 @@ assert(set(rem_df.columns).intersection(column_labels.keys())=={'awake',
 ```python
 
 ``` 
+
+### Assig 3:
+### Assig 4:
+### Assig 5:
+### Assig 6:
+### Assig 7:
+### Initial Project Proposal:
+
+1. need a specific research question:
+
+- Did Reddit Job career advice subreddits increase in activity since the start of the pandemic? Which kinds of posts have been more popular since March 2020? What about after stimulus release dates?
+
+subreddits in question:
+1. jobs
+2. careerguidance
+3. cscareerquestions
+4. experienceddevs
+
+5. carrying out the data analysis:
+- Create one or more notebooks in the data_analysis folder to read in the data you uploaded to the data folder into a Pandas data frame and carry out the initial exploration and analysis steps.
+
+These steps include:
+
+What are the dimensions (number of rows and columns) of the data frame?
+
+What does each row represent?
+
+What do the columns mean?
+
+Rename columns if necessary (e.g. no spaces, reasonable length, understandable)
+
+Examine the distribution (i.e., the range or type of values in the key columns of interest)
+
+If relevant visualize the data (e.g. plot a histogram, plot a line graph, etc.)
+
+What observations and questions do you have after exploring your data?
+
+
