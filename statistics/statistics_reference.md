@@ -139,6 +139,7 @@ from collections import Counter
 - dispersion measures how spread out the data is
     - values near 0 mean data is not spread out at all, and large values signift it's very spread out. 
 
+### Range
 - simplest measure of dispersion is the range, here is my implementation of it:
 
 ```python
@@ -146,4 +147,18 @@ from collections import Counter
 def data_range(data: list[float]) -> float:
     return (max(data) - min(data))
 ```
+- range is like median in the way that the particular values of a dataset do not change it too much. 
+- for example, a data set of all 0's and a data set of all 100's willl have the same range, they are both as undispersed as possible, despite having vastly different values. 
+- also a data set like `{0,50,50,100}` has the same range as `{0,0,0,0,100}`, even though we think that the first set should be more dispersed. 
+
+### Variance
+
+another good measure of dispersion is variance
+
+to implement it, we need the `sum_of_squares` function (TODO: can I implement this from scratch?)
+
+```python
+from linear_algebra.s
+```
+
 
