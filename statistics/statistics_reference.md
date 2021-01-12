@@ -88,13 +88,21 @@ def quantile(data:list[float], p: float) -> float:
 - less common but still useful
 - counts the most common values in the dataset
 - the output should be a list to account for the fact that two or more values could be tied for highest frequency. 
-- implementation here:
+
+
+ideas for implementation number 1:
+
+```mermaid
+
+graph LR
+    create_space --> add_to_bucket; 
+    get_max_of_bucket; 
+
+```
+
+My first implementation of mode:
 
 ```python
-
-"""
-first version of implementation:
-"""
 
 def mode(data: list[float]) -> list[float]:
     modes = []
@@ -119,13 +127,23 @@ def mode(data: list[float]) -> list[float]:
     return modes
 ```
 
-ideas for implementation number 1:
+Using `counter` I can write a cleaner version of the mode function:
 
-```mermaid
+```python
+from collections import Counter
 
-graph LR
-    create_space --> add_to_bucket; 
-    get_max_of_bucket; 
+# TODO: implement Counter version
+```
 
+# Dispersion
+- dispersion measures how spread out the data is
+    - values near 0 mean data is not spread out at all, and large values signift it's very spread out. 
+
+- simplest measure of dispersion is the range, here is my implementation of it:
+
+```python
+
+def data_range(data: list[float]) -> float:
+    return (max(data) - min(data))
 ```
 
