@@ -27,20 +27,80 @@ mean(data) # returns mean of list of data.
   - code includes underscore notation for *private* functions in python (only means to be called by our internal median function, not other users):
     - [discussion on "privacy" in python](https://stackoverflow.com/questions/1547145/defining-private-module-functions-in-python)
     - [more information on private methods](https://www.geeksforgeeks.org/private-methods-in-python/)
+
+- my implementation of median: 
 ```python
-    # private helper functions first:
+def _median_even_case(data: list[float])-> float:
+    # average of two middle elements in list:
+    middle = int((len(data) / 2) - 1)
+    low_mid = data[middle]
+    high_mid = data[middle + 1]
+    return (low_mid + high_mid)/2
 
-    def _median_odd_case(data: list[float])-> float:
-      # average of two middle elements in list:
-      middle = len(data) / 2
-      low_mid = math.floor(middle)
-      high_mid = math.ceil(middle)
-      return (low_mid + high_mid)/2
-    
+def _median_odd_case(data: list[float])-> float:
+    # just the middle of the data:
+    middle = (len(data) / 2) - 1  # indexing starts at 0
+    #print(middle)
+    true_mid = data[math.ceil(middle)]
+    #print(true_mid)
+    return true_mid
 
-    def _median_even_case(data: list[float])->float:
-      # 
+
+def median(data):
+    # TODO - validate that the list is sorted
+    if len(data)%2 == 0:
+        return _median_even_case(data)
+    else:
+        return _median_odd_case(data)
+    return "invalid input! check the list"
 ```
+- issue with this implementation is that it can only take in sorted input, so future additions must only allow sorted input or sort the input.
 
-### Mode
+- TODO: add sorting sub-function to statistics package. 
 
+### Quantiles
+
+Generalization of the median
+- median is the "half" quantile. it is the value under which $50%$ of the data lies. 
+
+implementation of quantiles:
+
+```python
+"""
+quantile:
+
+input - a percent value, ex: 0.10 = 10%, which markes the percentile value, must be a sorted list!
+output - the percentile in the dataset
+"""
+
+def quantile(data:list[float], p: float) -> float:
+    # TODO - validate that the list is sorted
+    p_index = int(p*len(data)) # get the interger marking the percentile in the data
+
+    return data[p_index]
+
+
+```
+- as with the median, the list needs to be sorted, but we can implement this at a later time. 
+
+## Mode
+
+- less common but still useful
+- counts the most common values in the dataset
+- the output should be a list to account for the fact that two or more values could be tied for highest frequency. 
+- implementation here:
+
+```python
+
+"""
+first version of implementation:
+"""
+
+def mode(data: list[float]) -> list[float]:
+    # keep the count in a list
+    for x in data:
+        
+
+
+
+```
