@@ -29,11 +29,32 @@ def median(data):
     return "invalid input! check the list"
 
 
-def mode():
-    return -1
+def mode(data: list[float]) -> list[float]:
+    modes = []
+    value_frequencies = {}
+
+    # keep the count in a dictionary
+    for x in data:
+        value_frequencies[x] = 0
+        print(value_frequencies[x])
+    
+    for x in data:
+        value_frequencies[x] += 1
+        print(value_frequencies) # eureka!
+    
+    #print(max(value_frequencies.values())) # ok but how do i get its key
+
+    for key in value_frequencies:
+        if value_frequencies[key] == max(value_frequencies.values()):
+            modes.append(key)
+    print(modes, "are modes")
+        
+    return modes
+        
+    
 
 
-
+"""
 # driver code
 d = [1,2,3,4]
 print(median(d))
@@ -42,3 +63,7 @@ print(median(d))
 
 d = [1,2,3,4,5]
 print(median(d))
+mode([1,2,3,3,4,4])
+
+"""
+

@@ -97,10 +97,35 @@ first version of implementation:
 """
 
 def mode(data: list[float]) -> list[float]:
-    # keep the count in a list
+    modes = []
+    value_frequencies = {}
+
+    # keep the count in a dictionary
     for x in data:
+        value_frequencies[x] = 0
+        print(value_frequencies[x])
+    
+    for x in data:
+        value_frequencies[x] += 1
+        print(value_frequencies) # eureka!
+    
+    #print(max(value_frequencies.values())) # ok but how do i get its key
+
+    for key in value_frequencies:
+        if value_frequencies[key] == max(value_frequencies.values()):
+            modes.append(key)
+    print(modes, "are modes")
         
+    return modes
+```
 
+ideas for implementation number 1:
 
+```mermaid
+
+graph LR
+    create_space --> add_to_bucket; 
+    get_max_of_bucket; 
 
 ```
+
