@@ -24,6 +24,9 @@ def _median_odd_case(data: list[float])-> float:
 def median(data):
     if len(data)%2 == 0:
         return _median_even_case(data)
+    else:
+        return _median_odd_case(data)
+    return "invalid input! check the list"
 
 
 def mode():
@@ -37,5 +40,5 @@ print(median(d))
 
 # median case works! now check odd case
 
-d = [1,2,3,4]
+d = [1,2,3,4,5]
 print(median(d))
